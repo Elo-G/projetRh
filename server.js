@@ -5,6 +5,7 @@ const compagnyRouter= require('./Routes/compagnyRouter');
 const workerRouter= require('./Routes/workerRouter');
 require ('dotenv').config(); //ATTENTION à mettre soit en haut de la page soitau dessus de const db
 
+
 const db = process.env.BDD_URL;
 const app = express();
 

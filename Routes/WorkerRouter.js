@@ -1,5 +1,5 @@
 const workerRouter = require("express").Router();
-const workerModel = require("../models/workerModel");
+const workerModel = require("../Models/workerModel");
 const authGuard = require("../services/authGuard");
 // const authGard = require ('../services/authGuard')
 const upload = require("../services/uploadFile");

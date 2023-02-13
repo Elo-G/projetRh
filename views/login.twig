@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="./style.css">
+    <title>Connexion à mon compte</title>
+</head>
+
+
+<body>
+ {# NAV BARRE #}
+
+     <div id='banner'>
+         <div id="appName"><H1>WORKERS</H1></div>
+     </div>
+
+
+ {# FORMULAIRE DE CONNEXION #}
+ <main>
+     <div><h2 class='pageName'>Login</h2></div>
+     <article class="pageContent" >
+             <form action="/login" method="post">
+                 <input class='forInput' type="text" id='mailLogin' name ="mail" placeholder = "email : ">
+                 <input class='forInput' type="text" id='pswdLogin' name = "password" placeholder='Mot de passe : '>
+                 <button type='submit' id="loginButton">Se connecter</button>
+             </form>
+         <div id="msg-error">{{errConnect}}</div> <!--execute errConnect (clé definie ds la route pr se logger cf CompagnyRouter.js!-->
+     </article>
+ </main>
+</body>
+{# premier crochet je déclare une instruction et le deuxieme = je déclare une valeur, une variable ou un objet etc... #}
+
+
+</html>

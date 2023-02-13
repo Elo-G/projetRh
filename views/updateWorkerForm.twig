@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="C:\Users\willi\Desktop\Elo\VS-CODE-ELO\VS-CODE\2.PROJETS\projetRh\assets\style.css">
+    <title>Modification des données employés</title>
+     
+</head>
+
+
+<body>
+ {# NAV BARRE #}
+ <header>
+     <div id='banner'>
+         <div id="appName"><H1>WORKERS</H1></div>
+         <a class="nav-link " href="/logout">Se déconnecter</a>
+     </div>
+ </header>
+
+{#FORMULAIRE DE MODIF DES DONNEES WORKER #}
+<main>
+  <h2> modification des données </h2>
+
+  <article class="formContainer">
+     <form id='formUpdateEmploye' action="/updateWorker/{{tata._id}}"method ="POST"  enctype="multipart/form-data"> <!--ATTENTION:ne pas oublier le enctype, sinon je ne pourrais pas uploader mes fichiers, donc ici mon image!-->
+         <label for="name">Nom</label>
+         <input class='forInput' type="text" name="name" value="{{tata.name}}"><!--ici je met value , ça permet de réafficher ds les input les données stockées-->
+
+         <label for="firstName">Prénom</label>
+         <input class='forInput' type="text" name="firstName" value="{{tata.firstName}}">
+
+         <label for="workStation">Poste occupé</label>
+         <input class='forInput' type="text" name="workStation" value="{{tata.workStation}}">
+
+         <label for="blameNumber">Nombre de blame</label>
+         <input class='forInput' type="number" name="blameNumber" value="{{tata.blameNumber}}">
+
+         <button id='updateButton' type="submit">Valider</button>
+     </form>
+  </article>
+</main>
+
+</body>
+</html>

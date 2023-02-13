@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Listing des employés</title>
+</head>
+<body> 
+ {# NAV BARRE #}
+ <header>
+ <div id='banner'>
+ <div id="appName"><H1>WORKERS</H1></div>
+ <a id="nav-link" href="/logout"> Se déconnecter</a>
+ </div>
+ </header>
+
+<main>
+ <div><h2 id='hListingPage'>Liste des employés</h2></div>
+  {#ARTICLE CONTENANT LISTING EMPLOYES#}
+   <article class="pageContent"> 
+     <button id="addBouton"><a ="addWrk" href="/addWorker"> AJOUTER UN EMPLOYE</a></button>
+     <article class="article-employe">
+       {% for worker in workers %}
+          <div class="cardWorker">
+              <img id ='idImg'src="./uploads/{{worker.img}}" alt="photo de l'employé" id="imgWorker">
+              <p class="p-card"><b>Nom : </b><span class="span-card"> {{worker.name}}</span></p>
+              <p class="p-card"><b>Prénom : </b><span class="span-card"> {{worker.firstName}}</span></p>
+              <p class="p-card"><b>Poste : </b><span class="span-card"> {{worker.workStation}}</span></p>
+              <p class="p-card"><b>Blame : </b><span class="span-card"> {{worker.blameNumber}}</span></p>           
+              <div id='command'>
+                 <a class="fonctionnalite " href="/updateWorker/{{worker.id}}"><b>MODIFIER</b></a> 
+                 <a class="fonctionnalite " href="/addBlame/{{worker.id}}"><b>ENVOYER UN BLAME</b></a>
+                 <a class="fonctionnalite " href="/deleteWorker/{{worker.id}}"><b>SUPPRIMER</b></a>
+               </div>
+             </div>
+       {% endfor %}
+     </article>
+   </article>
+</main>
+
+
+
+
+
+<script src="./script/main.js"></script>
+</body>
+</html>

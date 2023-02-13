@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>formulaire employés</title>
+</head>
+
+<body> 
+{# NAV BARRE #}
+ <header>
+   <div id='banner'>
+     <div id="appName"><H1>WORKERS</H1></div>
+     <a id="nav-link" href="/logout"> Se déconnecter</a>
+   </div>
+ </header>
+
+{#FORMULAIRE D'JOUTER D'EMPLOYE #}
+<main>
+ <div><h2 class='pageName'>Ajout d'un nouvel employé</h2></div>
+
+   <article class="formContainer"> 
+     <form id ="formAddEmployes" action="/addWorker" method="post"  enctype="multipart/form-data"><!--ATTENTION:ne pas oublier le enctype, sinon je ne pourrais pas uploader mes fichiers, donc ici mon image!-->
+       <label for="img">Photo d'identité</label>
+       <input class='forInput'id='upload' type="file" name="img">
+      
+       <label for="name">Nom</label>
+       <input class='forInput' type="text" name="name">
+
+       <label for="firstName">Prénom</label>
+       <input class='forInput' type="text" name="firstName">
+
+       <label for="workStation">Poste occupé</label>
+       <input class='forInput' type="text" name="workStation">
+
+       <button id='addButton' type="submit">Valider</button>
+     </form>  
+   </article>
+ </main>
+</body>
+
+</html>

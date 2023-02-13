@@ -1,0 +1,41 @@
+<!--Fichier twig contenat le Formulaire pour inscrire des entreprises 
+(et crée la collection compagnys ds LA BDD via la route /addCompagny POST-->
+
+
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="./style.css">
+    <title>formulaire d'inscription</title>
+</head>
+
+<body>
+
+  {# NAV BARRE #}
+ <header>
+  <div id='banner'>
+    <div id="appName"><H1>WORKERS</H1></div>
+  </div>
+ </header>
+
+ {#FORMULAIRE D'ENREGISTREMENT DES ENTREPRISES #}
+ <main>
+     <div><h2 class='pageName'>S'enregistrer</h2></div>
+     <article class="pageContent">
+       <form id='registerForm' action="/registrerCompagny" method = "POST">
+         <input class='forInput' type="text" id="name" name ="name" placeholder = "Nom : ">
+         <input class='forInput' type="text" id="siretNumber" name = "siretNumber" placeholder ="Numéro Siret : ">
+         <input class='forInput' type="text" id ="mail" name = "mail" placeholder= "email : ">
+         <input class='forInput' type="text" id ="pdgName" name = "pdgName" placeholder= "Nom du directeur : ">
+         <input class='forInput' type="text" id = "password" name = "password" placeholder = "Mot de passe : ">
+         <button type="submit" id="validerButton">valider</button>
+       </form>
+     </article>
+ </main>
+    
+</body>
+</html>
